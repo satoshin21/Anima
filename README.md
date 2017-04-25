@@ -1,6 +1,3 @@
-<img src="./img/eyecatch.png" ></img>
-
-<CENTER>
 [![Version](https://img.shields.io/cocoapods/v/Anima.svg?style=flat)](http://cocoapods.org/pods/Anima)
 [![License](https://img.shields.io/cocoapods/l/Anima.svg?style=flat)](http://cocoapods.org/pods/Anima)
 [![Platform](https://img.shields.io/cocoapods/p/Anima.svg?style=flat)](http://cocoapods.org/pods/Anima)
@@ -9,13 +6,16 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![Platform](https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg)
-</CENTER>
+
+<p align="center">
+<img src="./img/eyecatch.png"/>
+</p>
 
 # Anima
 Anima is chainable Layer-Based Animation library for Swift3.<br>
 It support to make sequensial and groouped animation more easily.
 
-img src="./img/eyecatch.gif"
+<img src="./img/eyecatch.gif" width=700px>
 
 is written as follows.
 
@@ -154,10 +154,21 @@ but It has any problems when you use with `AnimaOption.autoreverse`.
 so If you use it, please be careful of options.
 
 ### Original KeyPath
+If you want to animate other animatable values, You can use `AnimaType.original(keyPath: String, from: Any?, to: Any)` for it.
+`CAEmitterLayer`'s animation is like this.
+
+```swift
+let layer = CAEmitterLayer()
+layer.emitterPosition = CGPoint(x: 100.0, y:100.0)
+
+layer.anima
+    .next(.original(keyPath: #keyPath(CAEmitterLayer.emitterPosition), from: layer.emitterPosition, to: CGPoint(x: 200.0, y:200.0)))
+    .fire()       
+```
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, open `Anima.xcodeproj`, and run target `Anima iOS Example`.
 
 ## Installation
 
@@ -170,7 +181,7 @@ pod "Anima"
 ```
 
 ### Carthage
-Add github `SatoshiN21/Anima` to your `Cartfile`.
+Add github `satoshin21/Anima` to your `Cartfile`.
 Execute carthage update to install it.
 
 ## Author
