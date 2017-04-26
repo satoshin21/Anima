@@ -13,7 +13,7 @@
 
 # Anima
 Anima is chainable Layer-Based Animation library for Swift3.<br>
-It support to make sequensial and groouped animation more easily.
+It support to make sequential and grouped animation more easily.
 
 <img src="./img/eyecatch.gif" width=700px>
 
@@ -69,7 +69,7 @@ or destination is determined, use `.moveTo(x: CGFloat, y: CGFloat)`.
 
 ※ Anima doesn't update `CALayer.position` value for animations. Because when update Layer-backed view's layer position value, It will be resetted to default value frequently.
 
-### Sequencial Animation
+### Sequential Animation
 Anima supports.
 
 ### Group Animation
