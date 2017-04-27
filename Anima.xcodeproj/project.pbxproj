@@ -35,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		638417311EB1BEE20012A7FA /* Anima.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Anima.podspec; sourceTree = "<group>"; };
+		638417321EB1BEE20012A7FA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		638417331EB1BEE20012A7FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		63A950B91EAFAB6C007AFB34 /* Anima.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Anima.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A950BC1EAFAB6C007AFB34 /* Anima.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Anima.h; sourceTree = "<group>"; };
 		63A950BD1EAFAB6C007AFB34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +90,9 @@
 		63A950AF1EAFAB6C007AFB34 = {
 			isa = PBXGroup;
 			children = (
+				638417311EB1BEE20012A7FA /* Anima.podspec */,
+				638417321EB1BEE20012A7FA /* LICENSE */,
+				638417331EB1BEE20012A7FA /* README.md */,
 				63A950BB1EAFAB6C007AFB34 /* Sources */,
 				63A950C91EAFAB92007AFB34 /* Example */,
 				63A950BA1EAFAB6C007AFB34 /* Products */,
@@ -478,6 +484,7 @@
 				63A950C31EAFAB6C007AFB34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63A950D71EAFAB92007AFB34 /* Build configuration list for PBXNativeTarget "Anima iOS Example" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +493,7 @@
 				63A950D91EAFAB92007AFB34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

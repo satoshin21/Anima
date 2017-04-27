@@ -27,10 +27,10 @@ class PauseResumeAnimationViewController: UIViewController {
         let rotate = AnimaType.rotateByZDegree(360)
         let anima = animaView.layer.anima
         anima
-            .nextGroup([.moveByX(100), rotate])
-            .nextGroup([.moveByY(100), rotate])
-            .nextGroup([.moveByX(-100), rotate])
-            .nextGroup([.moveByY(-100), rotate]).fire { [weak self] in
+            .then(group: [.moveByX(100), rotate])
+            .then(group: [.moveByY(100), rotate])
+            .then(group: [.moveByX(-100), rotate])
+            .then(group: [.moveByY(-100), rotate]).fire { [weak self] in
                 self?.fireAnimation()
         }
         self.anima = anima
