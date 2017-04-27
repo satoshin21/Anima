@@ -25,20 +25,20 @@ let moveAnimations: [AnimaType] = [.moveByX(50), .rotateByZDegree(90)]
 let endAnimations: [AnimaType] = [.moveByY(-50), .rotateByZDegree(90)]
 
 animaView.layer.anima
-    .next(.opacity(1.0))
-    .nextGroup(startAnimations)
-    .nextGroup(moveAnimations, options: labelAnimaOption(index: 0))
-    .nextGroup(moveAnimations, options: labelAnimaOption(index: 1))
-    .nextGroup(moveAnimations, options: labelAnimaOption(index: 2))
-    .nextGroup(moveAnimations, options: labelAnimaOption(index: 3))
-    .nextGroup(endAnimations, options: labelAnimaOption(index: 4))
-    .nextGroup([.scaleBy(0.0), AnimaType.opacity(0.0)])
+    .then(.opacity(1.0))
+    .then(group: startAnimations)
+    .then(group: moveAnimations, options: labelAnimaOption(index: 0))
+    .then(group: moveAnimations, options: labelAnimaOption(index: 1))
+    .then(group: moveAnimations, options: labelAnimaOption(index: 2))
+    .then(group: moveAnimations, options: labelAnimaOption(index: 3))
+    .then(group: endAnimations, options: labelAnimaOption(index: 4))
+    .then(group: [.scaleBy(0.0), AnimaType.opacity(0.0)])
 
 func labelAnimaOption(index: Int) -> [AnimaOption] {
     let labelAnima = labels[index]?.layer.anima
 
     return [.completion({
-        labelAnima?.next(.opacity(1)).fire()
+        labelAnima?.then(.opacity(1)).fire()
     })]
 }
 ```
@@ -62,7 +62,7 @@ If you want to translate `CALayer.position` relatively, use `.moveByX(CGFloat)`,
 <img src="./img/sample_move.gif" width=300px>
 
 ```swift
-layer.anima.next(.moveByX(50)).fire()
+layer.anima.then(.moveByX(50)).fire()
 ```
 
 or destination is determined, use `.moveTo(x: CGFloat, y: CGFloat)`.
@@ -74,7 +74,7 @@ Anima supports.
 
 ### Group Animation
 To run animation concurrently, you use `CAAnimationGroup` with CoreAnimation.
-In Anima, you can use `Anima.nextGroup()` to run some `AnimaType` concurrently.
+In Anima, you can use `Anima.then(group: )` to run some `AnimaType` concurrently.
 
 Below is an example of how to run moving, scaling and rotating animations concurrently.
 
@@ -82,7 +82,7 @@ Below is an example of how to run moving, scaling and rotating animations concur
 
 ```swift
 layer.anima
-    .nextGroup([.moveByX(200),
+    .then(group: [.moveByX(200),
                 .scaleBy(1.5),
                 .rotateByZDegree(180)])
     .fire()
@@ -106,7 +106,7 @@ you can use these values as belows.
 ```
 layer
     .anima
-    .next(.moveByX(100), options: [.autoreverse,
+    .then(.moveByX(100), options: [.autoreverse,
                                    .timingFunciton(.easeInQuad),
                                    .repeat(count: 3),
                                    .completion({
@@ -128,21 +128,21 @@ and CALayer has `AnchorPoint`. Rotating, moving, or other Animations are affecte
 
 ```swift
 layer.anima
-    .next(.rotateByZDegree(360))
-    .next(.moveAnchor(.topLeft))
-    .next(.rotateByZDegree(360))
+    .then(.rotateByZDegree(360))
+    .then(.moveAnchor(.topLeft))
+    .then(.rotateByZDegree(360))
     .fire()
 ```
 
-or If you want to change only AnchorPoint, use `Anima.setAnchor(AnimaAnchorPoint)`.
+or If you want to change only AnchorPoint, use `Anima.then(setAnchor: AnimaAnchorPoint)`.
 
 <img src="./img/sample_anchor.gif" width=300px>
 
 ```swift
 layer.anima
-    .next(.rotateByZDegree(360))
-    .setAnchor(anchorPoint: .topLeft)
-    .next(.rotateByZDegree(360))
+    .then(.rotateByZDegree(360))
+    .then(setAnchor: anchorPoint: .topLeft)
+    .then(.rotateByZDegree(360))
     .fire()
 ```
 
@@ -162,14 +162,14 @@ let layer = CAEmitterLayer()
 layer.emitterPosition = CGPoint(x: 100.0, y:100.0)
 
 layer.anima
-    .next(.original(keyPath: #keyPath(CAEmitterLayer.emitterPosition), from: layer.emitterPosition, to: CGPoint(x: 200.0, y:200.0)))
+    .then(.original(keyPath: #keyPath(CAEmitterLayer.emitterPosition), from: layer.emitterPosition, to: CGPoint(x: 200.0, y:200.0)))
     .fire()       
 ```
 
 ## Example
 
 To run the example project, clone the repo, open `Anima.xcodeproj`, and run target `Anima iOS Example`.
-
+ 
 ## Installation
 
 ### Cocoapods
