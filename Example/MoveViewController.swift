@@ -36,18 +36,18 @@ class MoveViewController: UIViewController {
         let location = gesture.location(in: self.view)
         
         animaView.layer.anima
-            .next(.moveTo(x: location.x, y: location.y), options: [.timingFunction(timingFunction)]).fire()
+            .then(.moveTo(x: location.x, y: location.y), options: [.timingFunction(timingFunction)]).fire()
     }
     
     @IBAction func moveY(_ sender: UIButton) {
     
         animaView.layer.anima
-            .next(.moveByY(50), options: [.timingFunction(timingFunction)]).fire()
+            .then(.moveByY(50), options: [.timingFunction(timingFunction)]).fire()
     }
     
     @IBAction func moveX(_ sender: UIButton) {
         
         animaView.layer.anima
-            .next(.moveByX(50), options: [.timingFunction(timingFunction)]).fire()
+            .then(.moveByX(50), options: [.timingFunction(timingFunction)]).fire()
     }
 }

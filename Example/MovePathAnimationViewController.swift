@@ -72,7 +72,7 @@ class MovePathAnimationViewController: UIViewController {
         
         let movePath = AnimaType.movePath(path: path, keyTimes: keyTimes)
         
-        animaView.layer.anima.next(movePath,
+        animaView.layer.anima.then(movePath,
                                    options: [.duration(sumTimeInterval)]).fire()
         
         self.locationArray = nil

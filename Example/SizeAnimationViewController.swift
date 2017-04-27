@@ -18,7 +18,7 @@ class SizeAnimationViewController: UIViewController {
         
         let animations: [AnimaType] = [.scaleBy(1.5),
                                        .rotateByZDegree(360)]
-        animaView.layer.anima.nextGroup(animations, options: [
+        animaView.layer.anima.then(group: animations, options: [
             .autoreverse,
             .timingFunction(.easeInOut),
             .repeat(count: .infinity)])
@@ -53,7 +53,7 @@ class SizeAnimationViewController: UIViewController {
             }
         }()
         
-        animaView.layer.anima.next(.moveAnchor(nextAnchor)).fire()
+        animaView.layer.anima.then(.moveAnchor(nextAnchor)).fire()
         currentAnchor = nextAnchor
     }
 }

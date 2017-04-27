@@ -79,7 +79,7 @@ public class Anima: NSObject {
     ///   - animationType: Animation that you want to perform (moveX, size, rotation, ... etc)
     ///   - options: Animation option that you want to apply (duration, timingFunction, completion, ... etc)
     /// - Returns: itself (Anima object)
-    public func next(_ animationType: AnimaType, options: [AnimaOption] = []) -> Self {
+    public func then(_ animationType: AnimaType, options: [AnimaOption] = []) -> Self {
         
         return next(animaNode: AnimaNode(nodeType: .single(animationType), options: options))
     }
@@ -91,7 +91,7 @@ public class Anima: NSObject {
     ///   - animationType: Animation that you want to perform (moveX, size, rotation, ... etc)
     ///   - options: Animation option that you want to apply (duration, timingFunction, completion, ... etc)
     /// - Returns: itself (Anima object)
-    public func nextGroup(_ animations: [AnimaType], options: [AnimaOption] = []) -> Self {
+    public func then(group animations: [AnimaType], options: [AnimaOption] = []) -> Self {
         
         return next(animaNode: AnimaNode(nodeType: .group(animations), options: options))
     }
@@ -101,7 +101,7 @@ public class Anima: NSObject {
     ///
     /// - Parameter t: TimeInterval. time of waiting next action
     /// - Returns: itself
-    public func wait(_ t: TimeInterval) -> Self {
+    public func then(waitFor t: TimeInterval) -> Self {
         
         return next(animaNode: AnimaNode(nodeType: .wait(t)))
     }
@@ -111,7 +111,7 @@ public class Anima: NSObject {
     /// but this method do not affect layer's frame, it update layer's anchorPoint only.
     /// - Parameter anchorPoint: AnchorPoint
     /// - Returns: itself
-    public func setAnchor(anchorPoint: AnimaAnchorPoint) -> Self {
+    public func then(setAnchor anchorPoint: AnimaAnchorPoint) -> Self {
         
         return next(animaNode: AnimaNode(nodeType: .anchor(anchorPoint)))
     }

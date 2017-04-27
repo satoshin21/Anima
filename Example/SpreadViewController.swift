@@ -36,14 +36,14 @@ class SpreadViewController: UIViewController {
         let endAnimations: [AnimaType] = [.moveByY(-50), .rotateByZDegree(90)]
         
         animaView.layer.anima
-            .next(.opacity(1.0))
-            .nextGroup(startAnimations)
-            .nextGroup(moveAnimations, options: labelAnimaOption(index: 0))
-            .nextGroup(moveAnimations, options: labelAnimaOption(index: 1))
-            .nextGroup(moveAnimations, options: labelAnimaOption(index: 2))
-            .nextGroup(moveAnimations, options: labelAnimaOption(index: 3))
-            .nextGroup(endAnimations, options: labelAnimaOption(index: 4))
-            .nextGroup([.scaleBy(0.0), AnimaType.opacity(0.0)])
+            .then(.opacity(1.0))
+            .then(group: startAnimations)
+            .then(group: moveAnimations, options: labelAnimaOption(index: 0))
+            .then(group: moveAnimations, options: labelAnimaOption(index: 1))
+            .then(group: moveAnimations, options: labelAnimaOption(index: 2))
+            .then(group: moveAnimations, options: labelAnimaOption(index: 3))
+            .then(group: endAnimations, options: labelAnimaOption(index: 4))
+            .then(group: [.scaleBy(0.0), AnimaType.opacity(0.0)])
             .fire(completion: {[weak self] in
                 
                 guard let `self` = self else {
@@ -58,7 +58,7 @@ class SpreadViewController: UIViewController {
                     .flatMap { $0?.layer.anima }
                     .forEach {
                  
-                        $0.next(.opacity(0.0)).fire()
+                        $0.then(.opacity(0.0)).fire()
                         
                 }
                 self.perform(#selector(SpreadViewController.segueList), with: nil, afterDelay: 1)
@@ -79,7 +79,7 @@ class SpreadViewController: UIViewController {
         
         return [.completion({
             
-            labelAnima?.next(.opacity(1)).fire()
+            labelAnima?.then(.opacity(1)).fire()
         })]
     }
 }

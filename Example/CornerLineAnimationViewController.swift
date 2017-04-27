@@ -22,7 +22,7 @@ class CornerLineAnimationViewController: UIViewController {
         let borderWidth = AnimaType.borderWidth(5)
         animaView.layer
             .anima
-            .nextGroup([size, cornerRadius, borderColor, borderWidth], options: [.timingFunction(.easeOutCubic),.duration(1.5), .autoreverse, .repeat(count: .infinity)])
+            .then(group: [size, cornerRadius, borderColor, borderWidth], options: [.timingFunction(.easeOutCubic),.duration(1.5), .autoreverse, .repeat(count: .infinity)])
             .fire()
     }
     
