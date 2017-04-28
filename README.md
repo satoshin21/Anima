@@ -140,7 +140,7 @@ or If you want to change only AnchorPoint, use `Anima.then(setAnchor: AnimaAncho
 ```swift
 layer.anima
     .then(.rotateByZDegree(360))
-    .then(setAnchor: anchorPoint: .topLeft)
+    .then(setAnchor: .topLeft)
     .then(.rotateByZDegree(360))
     .fire()
 ```
