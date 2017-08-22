@@ -52,7 +52,7 @@ internal struct AnimaNode {
                 
                 animations.forEach({$0.duration = duration})
                 group.duration = duration
-            } else if let duration = animations.max(by: { $0.0.duration > $0.1.duration } )?.duration {
+            } else if let duration = animations.max(by: { $0.duration > $1.duration } )?.duration {
                 
                 group.duration = duration
             }
