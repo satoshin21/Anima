@@ -32,7 +32,7 @@ animaView.layer.anima
     .then(group: moveAnimations, options: labelAnimaOption(index: 2))
     .then(group: moveAnimations, options: labelAnimaOption(index: 3))
     .then(group: endAnimations, options: labelAnimaOption(index: 4))
-    .then(group: [.scaleBy(0.0), AnimaType.opacity(0.0)])
+    .then(group: [.scaleBy(0.0), .opacity(0.0)])
 
 func labelAnimaOption(index: Int) -> [AnimaOption] {
     let labelAnima = labels[index]?.layer.anima
@@ -44,13 +44,13 @@ func labelAnimaOption(index: Int) -> [AnimaOption] {
 ```
 
 ## Requirements
-Anima require for Swift3 iOS9.0📱<br>
+Anima require for Swift3, iOS9.0📱<br>
 
 Sorry, Anima is not support macOS.
 But I'm going to support it soon 💪
 
 ## Features
-* All timing modes from [easings.set](http://easings.net/) are implemented.
+* Almost all timing modes from [easings.set](http://easings.net/) are implemented.
 * Spring Animation ( featured by [CASpringAnimation](https://developer.apple.com/reference/quartzcore/caspringanimation) )
 * Type-Safed Animation KeyPath ()
 
