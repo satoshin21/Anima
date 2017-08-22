@@ -44,7 +44,7 @@ func labelAnimaOption(index: Int) -> [AnimaOption] {
 ```
 
 ## Requirements
-Anima require for Swift3, iOS9.0📱<br>
+Anima require for Swift4, 3, iOS9.0📱<br>
 
 Sorry, Anima is not support macOS.
 But I'm going to support it soon 💪
@@ -178,6 +178,10 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "Anima"
+
+# If you want to use Swift 3 version, Please specify Anima version.
+
+pod "Anima", "0.5.1"
 ```
 
 ### Carthage
