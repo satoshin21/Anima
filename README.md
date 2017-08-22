@@ -49,6 +49,10 @@ Anima require for Swift3 iOS9.0📱<br>
 Sorry, Anima is not support macOS.
 But I'm going to support it soon 💪
 
+#### Swift 4
+Swift 4 version is under construction.
+If you want to use Anima with Swift 4 immediately, please specify the branch `swift4`.
+
 ## Features
 * All timing modes from [easings.set](http://easings.net/) are implemented.
 * Spring Animation ( featured by [CASpringAnimation](https://developer.apple.com/reference/quartzcore/caspringanimation) )
