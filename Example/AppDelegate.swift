@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navAppearance = UINavigationBar.appearance()
         navAppearance.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         navAppearance.barTintColor = .navigationBar
-        navAppearance.titleTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
+        navAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         UITableView.appearance().backgroundColor = .background
         
         UIButton.appearance().tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
