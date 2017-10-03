@@ -1,0 +1,4 @@
+language: swift
+xcode_project: Anima.xcodeproj # path to your xcodeproj folder
+xcode_scheme: Anima
+osx_image: xcode9
