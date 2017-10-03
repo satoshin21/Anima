@@ -66,6 +66,7 @@ class SpreadViewController: UIViewController {
             })
     }
     
+    @objc
     func segueList() {
         performSegue(withIdentifier: "segueList", sender: nil)
     }

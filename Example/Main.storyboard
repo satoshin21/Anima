@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="445-NA-Fy1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="445-NA-Fy1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Spread View Controller-->
         <scene sceneID="ZeA-I6-iMZ">
             <objects>
-                <viewController id="445-NA-Fy1" customClass="SpreadViewController" customModule="AnimaExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="445-NA-Fy1" customClass="SpreadViewController" customModule="Anima_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k1x-2d-BKn"/>
                         <viewControllerLayoutGuide type="bottom" id="3xy-0S-Pzu"/>
@@ -98,7 +104,7 @@
                             <constraint firstItem="vv8-Ju-ZQJ" firstAttribute="leading" secondItem="f2h-2B-cEv" secondAttribute="leading" id="548-IC-bBZ"/>
                             <constraint firstItem="4hP-9I-wZp" firstAttribute="leading" secondItem="etB-e3-Tfe" secondAttribute="leading" id="HZi-Vd-Yxn"/>
                             <constraint firstItem="f2h-2B-cEv" firstAttribute="centerX" secondItem="etB-e3-Tfe" secondAttribute="centerX" id="IXK-PV-yVJ"/>
-                            <constraint firstItem="3xy-0S-Pzu" firstAttribute="top" secondItem="4hP-9I-wZp" secondAttribute="bottom" id="TA6-kI-dJ5"/>
+                            <constraint firstAttribute="bottom" secondItem="4hP-9I-wZp" secondAttribute="bottom" id="TA6-kI-dJ5"/>
                             <constraint firstItem="f2h-2B-cEv" firstAttribute="centerY" secondItem="etB-e3-Tfe" secondAttribute="centerY" id="USE-oV-YTi"/>
                             <constraint firstAttribute="trailing" secondItem="4hP-9I-wZp" secondAttribute="trailing" id="YwI-dd-LID"/>
                             <constraint firstItem="vv8-Ju-ZQJ" firstAttribute="top" secondItem="f2h-2B-cEv" secondAttribute="bottom" id="sIO-OX-SrF"/>
@@ -118,12 +124,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qA5-7n-rj2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1602" y="-160"/>
+            <point key="canvasLocation" x="-1602.4000000000001" y="-160.56971514242881"/>
         </scene>
         <!--Anima-->
         <scene sceneID="8Mr-78-r5z">
             <objects>
-                <tableViewController id="dGB-CO-b9H" customClass="AnimaListTableViewController" customModule="AnimaExample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="dGB-CO-b9H" customClass="AnimaListTableViewController" customModule="Anima_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MAl-e7-a4Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,7 +165,7 @@
         <!--Move-->
         <scene sceneID="9xL-MC-40e">
             <objects>
-                <viewController title="Move" id="fWU-Uc-ptY" customClass="MoveViewController" customModule="AnimaExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Move" id="fWU-Uc-ptY" customClass="MoveViewController" customModule="Anima_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="khn-ZG-eMO"/>
                         <viewControllerLayoutGuide type="bottom" id="yed-NE-FHT"/>
@@ -220,7 +226,7 @@
         <!--Size & AnchorPoint & Rotate-->
         <scene sceneID="cRR-20-KOV">
             <objects>
-                <viewController title="Size &amp; AnchorPoint &amp; Rotate" id="YJd-GJ-Od1" customClass="SizeAnimationViewController" customModule="AnimaExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Size &amp; AnchorPoint &amp; Rotate" id="YJd-GJ-Od1" customClass="SizeAnimationViewController" customModule="Anima_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JnC-w4-b6S"/>
                         <viewControllerLayoutGuide type="bottom" id="tQF-NQ-g4H"/>
@@ -283,7 +289,7 @@
         <!--Move Path-->
         <scene sceneID="RxT-Ei-Igm">
             <objects>
-                <viewController title="Move Path" id="0Rq-PL-yym" customClass="MovePathAnimationViewController" customModule="AnimaExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Move Path" id="0Rq-PL-yym" customClass="MovePathAnimationViewController" customModule="Anima_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nJd-8N-7Zm"/>
                         <viewControllerLayoutGuide type="bottom" id="cSB-TW-hWd"/>
@@ -326,7 +332,7 @@
         <!--Corner and Line-->
         <scene sceneID="rXC-rS-Ayj">
             <objects>
-                <viewController title="Corner and Line" id="M4N-UX-isq" customClass="CornerLineAnimationViewController" customModule="AnimaExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Corner and Line" id="M4N-UX-isq" customClass="CornerLineAnimationViewController" customModule="Anima_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="52v-lM-zZv"/>
                         <viewControllerLayoutGuide type="bottom" id="N2w-Lv-Vw8"/>
@@ -361,7 +367,7 @@
         <!--Pause And Resume-->
         <scene sceneID="KL2-8t-DVS">
             <objects>
-                <viewController title="Pause And Resume" id="CeF-6F-lkW" customClass="PauseResumeAnimationViewController" customModule="AnimaExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pause And Resume" id="CeF-6F-lkW" customClass="PauseResumeAnimationViewController" customModule="Anima_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RD8-c8-YxZ"/>
                         <viewControllerLayoutGuide type="bottom" id="Akt-rH-FzX"/>
@@ -408,8 +414,8 @@
         <scene sceneID="uVs-hQ-fXW">
             <objects>
                 <navigationController id="Gvu-ha-4Rg" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Jn-LX-S4D">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="4Jn-LX-S4D">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

@@ -2,17 +2,20 @@
 [![License](https://img.shields.io/cocoapods/l/Anima.svg?style=flat)](http://cocoapods.org/pods/Anima)
 [![Platform](https://img.shields.io/cocoapods/p/Anima.svg?style=flat)](http://cocoapods.org/pods/Anima)
 ![language](https://img.shields.io/badge/Language-Swift3-8E44AD.svg)
+![language](https://img.shields.io/badge/Language-Swift4-8E44AD.svg)
+![Version](https://img.shields.io/badge/Pod-%20v2.0.1%20-96281B.svg)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![Platform](https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg)
+![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)
 
 <p align="center">
 <img src="./img/eyecatch.png"/>
 </p>
 
 # Anima
-Anima is chainable Layer-Based Animation library for Swift3.<br>
-It support to make sequential and grouped animation more easily.
+Anima is chainable Layer-Based Animation library for Swift4.<br>
+It support to make sequensial and grouped animation more easily.
 
 <img src="./img/eyecatch.gif" width=700px>
 
@@ -31,7 +34,7 @@ animaView.layer.anima
     .then(group: moveAnimations, options: labelAnimaOption(index: 2))
     .then(group: moveAnimations, options: labelAnimaOption(index: 3))
     .then(group: endAnimations, options: labelAnimaOption(index: 4))
-    .then(group: [.scaleBy(0.0), AnimaType.opacity(0.0)])
+    .then(group: [.scaleBy(0.0), .opacity(0.0)])
 
 func labelAnimaOption(index: Int) -> [AnimaOption] {
     let labelAnima = labels[index]?.layer.anima
@@ -43,13 +46,16 @@ func labelAnimaOption(index: Int) -> [AnimaOption] {
 ```
 
 ## Requirements
-Anima require for Swift3 iOS9.0📱<br>
+Anima require for Swift4, 3 and greater than iOS9.0📱<br>
 
-Sorry, Anima is not support macOS.
-But I'm going to support it soon 💪
+### Anima version / Swift version
+Anima support Swift 3 and Swift 4.
+
+Latest version is developed with Swift 4,
+So if you want to use Anima with Swift 3, please specify Anima version to `0.5.1`.
 
 ## Features
-* All timing modes from [easings.set](http://easings.net/) are implemented.
+* Almost all timing modes from [easings.set](http://easings.net/) are implemented.
 * Spring Animation ( featured by [CASpringAnimation](https://developer.apple.com/reference/quartzcore/caspringanimation) )
 * Type-Safed Animation KeyPath ()
 
@@ -168,7 +174,7 @@ layer.anima
 ## Example
 
 To run the example project, clone the repo, open `Anima.xcodeproj`, and run target `Anima iOS Example`.
- 
+
 ## Installation
 
 ### Cocoapods
@@ -177,6 +183,10 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "Anima"
+
+# If you want to use Swift 3 version, Please specify Anima version.
+
+pod "Anima", "0.5.1"
 ```
 
 ### Carthage

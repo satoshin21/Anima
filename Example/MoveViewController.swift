@@ -32,7 +32,7 @@ class MoveViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func anywhereTapped(gesture: UITapGestureRecognizer) {
+    @objc func anywhereTapped(gesture: UITapGestureRecognizer) {
         let location = gesture.location(in: self.view)
         
         animaView.layer.anima
