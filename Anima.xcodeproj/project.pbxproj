@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6325730C200A743A004D7046 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63A950BD1EAFAB6C007AFB34 /* Info.plist */; };
 		63A950BE1EAFAB6C007AFB34 /* Anima.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A950BC1EAFAB6C007AFB34 /* Anima.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63A950DA1EAFAC1C007AFB34 /* Anima.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A950B91EAFAB6C007AFB34 /* Anima.framework */; };
 		63A950E61EAFAC77007AFB34 /* Anima.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A950DB1EAFAC77007AFB34 /* Anima.swift */; };
@@ -242,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6325730C200A743A004D7046 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
