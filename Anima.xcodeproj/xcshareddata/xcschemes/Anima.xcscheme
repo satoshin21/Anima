@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "63D9DAA2215A556D00299EE9"
+               BuildableName = "AnimaTests.xctest"
+               BlueprintName = "AnimaTests"
+               ReferencedContainer = "container:Anima.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "63A950B81EAFAB6C007AFB34"
+            BuildableName = "Anima.framework"
+            BlueprintName = "Anima"
+            ReferencedContainer = "container:Anima.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

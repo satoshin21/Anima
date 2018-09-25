@@ -33,10 +33,19 @@
 		63A9510E1EAFAE23007AFB34 /* UIColor+Anima.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A950F61EAFAD45007AFB34 /* UIColor+Anima.swift */; };
 		63A951111EAFAE4D007AFB34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A9510F1EAFAE4D007AFB34 /* LaunchScreen.storyboard */; };
 		63A951121EAFAE4D007AFB34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A951101EAFAE4D007AFB34 /* Main.storyboard */; };
+		63D9DAA6215A556D00299EE9 /* AnimaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9DAA5215A556D00299EE9 /* AnimaTests.swift */; };
+		63D9DAA8215A556D00299EE9 /* Anima.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A950B91EAFAB6C007AFB34 /* Anima.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		636D60721FADB52A00439DC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63A950B01EAFAB6C007AFB34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63A950B81EAFAB6C007AFB34;
+			remoteInfo = Anima;
+		};
+		63D9DAA9215A556D00299EE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 63A950B01EAFAB6C007AFB34 /* Project object */;
 			proxyType = 1;
@@ -91,6 +100,9 @@
 		63A951001EAFADB3007AFB34 /* CornerLineAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerLineAnimationViewController.swift; sourceTree = "<group>"; };
 		63A9510F1EAFAE4D007AFB34 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63A951101EAFAE4D007AFB34 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		63D9DAA3215A556D00299EE9 /* AnimaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63D9DAA5215A556D00299EE9 /* AnimaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimaTests.swift; sourceTree = "<group>"; };
+		63D9DAA7215A556D00299EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		63D9DAA0215A556D00299EE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D9DAA8215A556D00299EE9 /* Anima.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -120,6 +140,7 @@
 				638417331EB1BEE20012A7FA /* README.md */,
 				63A950BB1EAFAB6C007AFB34 /* Sources */,
 				63A950C91EAFAB92007AFB34 /* Example */,
+				63D9DAA4215A556D00299EE9 /* AnimaTests */,
 				63A950BA1EAFAB6C007AFB34 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,6 +150,7 @@
 			children = (
 				63A950B91EAFAB6C007AFB34 /* Anima.framework */,
 				63A950C81EAFAB92007AFB34 /* Anima iOS Example.app */,
+				63D9DAA3215A556D00299EE9 /* AnimaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,6 +193,15 @@
 				63A950D61EAFAB92007AFB34 /* Info.plist */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		63D9DAA4215A556D00299EE9 /* AnimaTests */ = {
+			isa = PBXGroup;
+			children = (
+				63D9DAA5215A556D00299EE9 /* AnimaTests.swift */,
+				63D9DAA7215A556D00299EE9 /* Info.plist */,
+			);
+			path = AnimaTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,13 +255,31 @@
 			productReference = 63A950C81EAFAB92007AFB34 /* Anima iOS Example.app */;
 			productType = "com.apple.product-type.application";
 		};
+		63D9DAA2215A556D00299EE9 /* AnimaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63D9DAAD215A556D00299EE9 /* Build configuration list for PBXNativeTarget "AnimaTests" */;
+			buildPhases = (
+				63D9DA9F215A556D00299EE9 /* Sources */,
+				63D9DAA0215A556D00299EE9 /* Frameworks */,
+				63D9DAA1215A556D00299EE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63D9DAAA215A556D00299EE9 /* PBXTargetDependency */,
+			);
+			name = AnimaTests;
+			productName = AnimaTests;
+			productReference = 63D9DAA3215A556D00299EE9 /* AnimaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		63A950B01EAFAB6C007AFB34 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = satoshin21;
 				TargetAttributes = {
@@ -242,6 +291,10 @@
 					63A950C71EAFAB92007AFB34 = {
 						CreatedOnToolsVersion = 8.3.2;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					63D9DAA2215A556D00299EE9 = {
+						CreatedOnToolsVersion = 10.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -261,6 +314,7 @@
 			targets = (
 				63A950B81EAFAB6C007AFB34 /* Anima */,
 				63A950C71EAFAB92007AFB34 /* Anima iOS Example */,
+				63D9DAA2215A556D00299EE9 /* AnimaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,6 +334,13 @@
 				63A951121EAFAE4D007AFB34 /* Main.storyboard in Resources */,
 				63A951071EAFAE23007AFB34 /* Assets.xcassets in Resources */,
 				63A951111EAFAE4D007AFB34 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63D9DAA1215A556D00299EE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +381,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		63D9DA9F215A556D00299EE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D9DAA6215A556D00299EE9 /* AnimaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -327,6 +396,11 @@
 			isa = PBXTargetDependency;
 			target = 63A950B81EAFAB6C007AFB34 /* Anima */;
 			targetProxy = 636D60721FADB52A00439DC2 /* PBXContainerItemProxy */;
+		};
+		63D9DAAA215A556D00299EE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63A950B81EAFAB6C007AFB34 /* Anima */;
+			targetProxy = 63D9DAA9215A556D00299EE9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -521,6 +595,47 @@
 			};
 			name = Release;
 		};
+		63D9DAAB215A556D00299EE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AnimaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = work.satoshin21.AnimaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63D9DAAC215A556D00299EE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AnimaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = work.satoshin21.AnimaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -547,6 +662,15 @@
 			buildConfigurations = (
 				63A950D81EAFAB92007AFB34 /* Debug */,
 				63A950D91EAFAB92007AFB34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63D9DAAD215A556D00299EE9 /* Build configuration list for PBXNativeTarget "AnimaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63D9DAAB215A556D00299EE9 /* Debug */,
+				63D9DAAC215A556D00299EE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
