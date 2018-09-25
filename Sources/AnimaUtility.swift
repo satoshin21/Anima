@@ -48,7 +48,7 @@ extension CGPath {
         return firstPoint
     }
     
-    func forEach( body: @convention(block) (CGPathElement) -> Void) {
+    func forEach( body: @escaping @convention(block) (CGPathElement) -> Void) {
         typealias Body = @convention(block) (CGPathElement) -> Void
         func callback(info: UnsafeMutableRawPointer?, element: UnsafePointer<CGPathElement>) {
             let body = unsafeBitCast(info, to: Body.self)
