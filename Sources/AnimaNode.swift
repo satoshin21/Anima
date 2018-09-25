@@ -37,7 +37,7 @@ internal struct AnimaNode {
             }
         case .group(let animations):
             
-            let animations = animations.flatMap({ (animaType) -> CAAnimation? in
+            let animations = animations.compactMap({ (animaType) -> CAAnimation? in
                 let animation = instantiateAnimaAnimation(animaType, layer: layer, animationDidStop: {_ in })
                 animation?.delegate = nil
                 return animation
