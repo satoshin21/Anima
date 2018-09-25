@@ -12,10 +12,10 @@ Pod::Spec.new do |s|
   s.source   = { :git => "https://github.com/satoshin21/Anima.git", :tag => s.version.to_s }
   s.source_files = "Sources/*{.swift,.h}"
   s.pod_target_xcconfig =  {
-        'SWIFT_VERSION' => '4.0',
+        'SWIFT_VERSION' => '4.2',
   }
 	s.description      = <<-DESC
-	Anima is chainable Layer-Based Animation library for Swift3.
+	Anima is chainable Layer-Based Animation library for Swift4.
 	It support to make sequensial and groouped animation more easily.
 										 DESC
 end
