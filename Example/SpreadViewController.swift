@@ -55,7 +55,7 @@ class SpreadViewController: UIViewController {
                  self.label3,
                  self.label4,
                  self.label5]
-                    .flatMap { $0?.layer.anima }
+                    .compactMap { $0?.layer.anima }
                     .forEach {
                  
                         $0.then(.opacity(0.0)).fire()

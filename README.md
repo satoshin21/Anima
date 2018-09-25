@@ -1,7 +1,6 @@
 [![Version](https://img.shields.io/cocoapods/v/Anima.svg?style=flat)](http://cocoapods.org/pods/Anima)
 [![License](https://img.shields.io/cocoapods/l/Anima.svg?style=flat)](http://cocoapods.org/pods/Anima)
 [![Platform](https://img.shields.io/cocoapods/p/Anima.svg?style=flat)](http://cocoapods.org/pods/Anima)
-![language](https://img.shields.io/badge/Language-Swift3-8E44AD.svg)
 ![language](https://img.shields.io/badge/Language-Swift4-8E44AD.svg)
 ![Version](https://img.shields.io/badge/Pod-%20v2.0.1%20-96281B.svg)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
@@ -46,10 +45,10 @@ func labelAnimaOption(index: Int) -> [AnimaOption] {
 ```
 
 ## Requirements
-Anima require for Swift4, 3 and greater than iOS9.0📱<br>
+Anima require for Swift4 and greater than iOS9.0📱<br>
 
 ### Anima version / Swift version
-Anima support Swift 3 and Swift 4.
+Anima support Swift 4.
 
 Latest version is developed with Swift 4,
 So if you want to use Anima with Swift 3, please specify Anima version to `0.5.1`.
