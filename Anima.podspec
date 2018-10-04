@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = "Anima"
-  s.version     = "0.9.0"
+  s.version     = "0.9.1"
   s.authors     = { "satoshin21" => "satoshi.nagasaka21@gmail.com" }
   s.homepage    = "https://github.com/satoshin21/Anima"
   s.summary     = "Anima is swifty animation library."
