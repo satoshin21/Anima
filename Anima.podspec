@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source   = { :git => "https://github.com/satoshin21/Anima.git", :tag => s.version.to_s }
   s.source_files = "Sources/*{.swift,.h}"
+  s.swift_version = "4.2"
   s.pod_target_xcconfig =  {
         'SWIFT_VERSION' => '4.2',
   }
