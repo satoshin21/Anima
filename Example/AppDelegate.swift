@@ -13,8 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func applicationDidFinishLaunching(_ application: UIApplication) {
         
         let navAppearance = UINavigationBar.appearance()
         navAppearance.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -26,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITableView.appearance().backgroundColor = .background
         
         UIButton.appearance().tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        return true
     }
 }
 

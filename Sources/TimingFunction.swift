@@ -6,8 +6,9 @@
 //
 //
 
-import Foundation
+//import Foundation
 import UIKit
+import QuartzCore
 
 internal typealias SpringInfo = (mass: CGFloat, stiffness: CGFloat, damping: CGFloat, initialVelocity: CGFloat)
 
@@ -47,16 +48,17 @@ public enum TimingFunction {
     case springSpeedy
     
     var timingFunction: CAMediaTimingFunction? {
-        
+
         switch self {
         case .linear:
-            return CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+
+            return CAMediaTimingFunction(name: .linear)
         case .easeIn:
-            return CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+            return CAMediaTimingFunction(name: .easeIn)
         case .easeOut:
-            return CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+            return CAMediaTimingFunction(name: .easeOut)
         case .easeInOut:
-            return CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+            return CAMediaTimingFunction(name: .easeInEaseOut)
         case .spring:
             return CAMediaTimingFunction(controlPoints: 0.5, 1.1+Float(1/3), 1, 1)
         case .easeInSine:
