@@ -288,17 +288,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = satoshin21;
 				TargetAttributes = {
 					63A950B81EAFAB6C007AFB34 = {
 						CreatedOnToolsVersion = 8.3.2;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Manual;
 					};
 					63A950C71EAFAB92007AFB34 = {
 						CreatedOnToolsVersion = 8.3.2;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
 					};
 					63D9DAA2215A556D00299EE9 = {
@@ -422,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -485,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -556,8 +558,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -579,8 +580,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -596,8 +596,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.hatenadiary.satoshin21.anima.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -614,8 +613,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.hatenadiary.satoshin21.anima.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
