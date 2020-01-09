@@ -2,16 +2,17 @@ name: deploy-pod
 
 on:
   push:
-    tags: *
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Lint
-      run: pod spec lint
-    - name: Deploy
-      env:
-        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
-      run: pod trunk push Anima.podspec
+      - uses: actions/checkout@v1
+      - name: Lint
+        run: pod spec lint
+      - name: Deploy
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+        run: pod trunk push Anima.podspec
