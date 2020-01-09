@@ -13,7 +13,8 @@
 </p>
 
 # Anima
-Anima is chainable Layer-Based Animation library for Swift4.<br>
+
+Anima is chainable Layer-Based Animation library for Swift5.<br>
 It support to make sequensial and grouped animation more easily.
 
 <img src="./img/eyecatch.gif" width=700px>
@@ -45,22 +46,19 @@ func labelAnimaOption(index: Int) -> [AnimaOption] {
 ```
 
 ## Requirements
+
 Anima require for Swift4 and greater than iOS9.0📱<br>
 
-### Anima version / Swift version
-Anima support Swift 4.
-
-Latest version is developed with Swift 4,
-So if you want to use Anima with Swift 3, please specify Anima version to `0.5.1`.
-
 ## Features
-* Almost all timing modes from [easings.set](http://easings.net/) are implemented.
-* Spring Animation ( featured by [CASpringAnimation](https://developer.apple.com/reference/quartzcore/caspringanimation) )
-* Type-Safed Animation KeyPath ()
+
+- Almost all timing modes from [easings.set](http://easings.net/) are implemented.
+- Spring Animation ( featured by [CASpringAnimation](https://developer.apple.com/reference/quartzcore/caspringanimation) )
+- Type-Safed Animation KeyPath ()
 
 ## Usage
 
 ### Move Position
+
 If you want to translate `CALayer.position` relatively, use `.moveByX(CGFloat)`, `.moveByY(CGFloat)`, `.moveByXY(x: CGFloat, y: CGFloat)` AnimaTypes.
 
 <img src="./img/sample_move.gif" width=300px>
@@ -74,9 +72,11 @@ or destination is determined, use `.moveTo(x: CGFloat, y: CGFloat)`.
 ※ Anima doesn't update `CALayer.position` value for animations. Because when update Layer-backed view's layer position value, It will be resetted to default value frequently.
 
 ### Sequential Animation
+
 Anima supports.
 
 ### Group Animation
+
 To run animation concurrently, you use `CAAnimationGroup` with CoreAnimation.
 In Anima, you can use `Anima.then(group: )` to run some `AnimaType` concurrently.
 
@@ -93,17 +93,16 @@ layer.anima
 ```
 
 ### Animation Options
+
 There are some options for Anima.
 
-* duration(TimeInterval)
-* timingFunction(TimingFunction)
-	* Change timing function defining the pacing of the animation.
-	* Default timing function is at `Anima.defaultTimingFunction`. If you do not set the timing function option, defaultTimingFunction is used.
-	* Please read `Anima.TimingFunction.swift`
-* repeat(count: Float)
-	* To run animation infinitely, set `.infinity`.
-* autoreverse
-* completion(() -> Void)
+- duration(TimeInterval)
+- timingFunction(TimingFunction)
+  _ Change timing function defining the pacing of the animation.
+  _ Default timing function is at `Anima.defaultTimingFunction`. If you do not set the timing function option, defaultTimingFunction is used. \* Please read `Anima.TimingFunction.swift`
+- repeat(count: Float) \* To run animation infinitely, set `.infinity`.
+- autoreverse
+- completion(() -> Void)
 
 you can use these values as belows.
 
@@ -151,6 +150,7 @@ layer.anima
 ```
 
 ### Move Path
+
 If you want to make moving animation more complex, use `.movePath(path: CGPath, keyTymes: [Double])`.
 Anima example app has sample of creating animation by drag gesture. you see it!
 
@@ -158,6 +158,7 @@ but It has any problems when you use with `AnimaOption.autoreverse`.
 so If you use it, please be careful of options.
 
 ### Original KeyPath
+
 If you want to animate other animatable values, You can use `AnimaType.original(keyPath: String, from: Any?, to: Any)` for it.
 `CAEmitterLayer`'s animation is like this.
 
@@ -167,7 +168,7 @@ layer.emitterPosition = CGPoint(x: 100.0, y:100.0)
 
 layer.anima
     .then(.original(keyPath: #keyPath(CAEmitterLayer.emitterPosition), from: layer.emitterPosition, to: CGPoint(x: 200.0, y:200.0)))
-    .fire()       
+    .fire()
 ```
 
 ## Example
@@ -177,6 +178,7 @@ To run the example project, clone the repo, open `Anima.xcodeproj`, and run targ
 ## Installation
 
 ### Cocoapods
+
 Anima is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -189,6 +191,7 @@ pod "Anima", "0.5.1"
 ```
 
 ### Carthage
+
 Add github `satoshin21/Anima` to your `Cartfile`.
 Execute carthage update to install it.
 
