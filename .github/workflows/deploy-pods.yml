@@ -2,7 +2,7 @@ name: deploy-pod
 
 on:
   push:
-    tags: v*
+    tags: *
 
 jobs:
   build:
