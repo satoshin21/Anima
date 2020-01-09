@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.source_files = "Sources/*{.swift,.h}"
   s.swift_version = "5.1"
   s.pod_target_xcconfig =  {
-        'SWIFT_VERSION' => '5.0',
+        'SWIFT_VERSION' => '5.1',
   }
 	s.description      = <<-DESC
 	Anima is chainable Layer-Based Animation library for Swift5.
