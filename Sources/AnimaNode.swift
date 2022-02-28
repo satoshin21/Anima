@@ -6,7 +6,7 @@
 //
 //
 
-import Foundation
+import UIKit
 
 internal enum NodeType {
     case single(AnimaType)

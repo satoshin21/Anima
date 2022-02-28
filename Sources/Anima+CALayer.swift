@@ -6,7 +6,7 @@
 //
 //
 
-import Foundation
+import UIKit
 
 private var AnimaPropertyKey: UInt8 = 0
 private var AnimationRectPropertyKey: UInt8 = 0
